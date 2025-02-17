@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>METHODS - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/curl.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../INTRODUCTION/" class="nav-link">INTRODUCTION</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OVERVIEW/" class="nav-link">OVERVIEW</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../Authentication/" class="nav-link">AUTHENTICATION</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">METHODS</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">OTHERS</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Authors/" class="dropdown-item">Authors</a>
+</li>
+                                    
+<li>
+    <a href="../Disclaimer.md" class="dropdown-item">Disclaimer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Authentication/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Authors/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#4-methods" class="nav-link">4 METHODS</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#41-test-call" class="nav-link">4.1 Test Call</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#42-change-password-changepassword" class="nav-link">4.2 Change Password (ChangePassword)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#43-get-tiles-gettitles" class="nav-link">4.3 Get Tiles (GetTitles)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#44-payment-methods-getpaymentmethods" class="nav-link">4.4 Payment Methods (GetPaymentMethods)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#45-get-agreement-types-getagreementtypes" class="nav-link">4.5 Get Agreement Types (GetAgreementTypes)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#46-agreement-status-getallagreementstatus" class="nav-link">4.6 Agreement Status (GetAllAgreementStatus)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#47-company-types-getbusinessclienttypes" class="nav-link">4.7 Company Types (GetBusinessClientTypes)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#48-brokeragents-getagents" class="nav-link">4.8 Broker/Agents (GetAgents)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#49-get-products-getassignedproductbybroker" class="nav-link">4.9 Get Products (GetAssignedProductByBroker)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#410-finance-calculator-financecalculator" class="nav-link">4.10 Finance Calculator (FinanceCalculator)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#411-agreement-templates-getassignedagreemnttemplates" class="nav-link">4.11 Agreement Templates (GetAssignedAgreemntTemplates)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#412-add-individual-client-addindividualclient" class="nav-link">4.12 Add Individual Client (AddIndividualClient)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#413-add-new-agreement-addnewagreement" class="nav-link">4.13 Add New Agreement (AddNewAgreement)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#414-get-agreements-by-parameters-getagreementsbyparameter" class="nav-link">4.14 Get Agreements By Parameters (GetAgreementsByParameter)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="4-methods">4 METHODS</h1>
+<p>In the first version of this documentation we are detailing only the most important endpoints omitting some less used endpoints but will try to include them in future revisions.</p>
+<h2 id="41-test-call">4.1 Test Call</h2>
+<p>The test method allows integration to the API to be tested without passing any dummy data.</p>
+<h3 id="411-example-request">4.1.1 Example Request</h3>
+<p>curl -X GET --header 'Accept: application/json'
+<a href="http://qa.lendxp.com/v1/rest/TestCall">http://qa.lendxp.com/v1/rest/TestCall</a></p>
+<h3 id="412-example-response">4.1.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;Message&quot;: &quot;Connection Established!&quot;,
+&quot;Resp&quot;: 0, 
+&quot;RetValue&quot;: &quot;&quot;,
+&quot;RetValue2&quot;: &quot;&quot;
+}
+</code></pre>
+<h2 id="42-change-password-changepassword">4.2 Change Password (ChangePassword)</h2>
+<p>The endpoint is used to change the existing password to a new one. We recommend you to change it once in 3 months. The endpoint is authorized and you must pass valid Authorization Header while calling this endpoint.</p>
+<p>The endpoint work with POST request and require following three parameters</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>DataType</th>
+<th>MaxLength</th>
+<th>Required?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UserID</td>
+<td>Any Text</td>
+<td>50</td>
+<td>Yes</td>
+<td>Username/UserID</td>
+</tr>
+<tr>
+<td>OldPassword</td>
+<td>Any Text</td>
+<td>50</td>
+<td>Yes</td>
+<td>The old password of the user in Base64 Encoded format.</td>
+</tr>
+<tr>
+<td>NewPassword</td>
+<td>Any Text</td>
+<td>50</td>
+<td>Yes</td>
+<td>New Password in Base64 Encoded format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="421-example-request">4.2.1 Example Request</h3>
+<p><a href="https://qa.lendxp.com/v1/rest/ChangePassword">https://qa.lendxp.com/v1/rest/ChangePassword</a></p>
+<pre><code class="language-json">{
+&quot;PasswordInfo&quot;: {
+&quot;UserID&quot;: &quot;testing@gmail.com&quot;, 
+&quot;OldPassword&quot;: &quot;U2FpbmlfNzg0NDY=&quot;, 
+&quot;NewPassword&quot;: &quot;U2FpbmlfNzg0NDY=&quot;
+}
+}
+</code></pre>
+<h3 id="422-example-response">4.2.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;Message&quot;: &quot;Password is updated successfully.&quot;,
+&quot;Resp&quot;: 0, 
+&quot;RetValue&quot;: &quot;&quot;,
+&quot;RetValue2&quot;: &quot;&quot;
+}
+</code></pre>
+<p>NOTE:</p>
+<p>You will notice in most of the endpoint response there is a parameter named as <strong>Resp</strong>. It means whether the response is successfully processed, failed some validation or just crashed.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Sr.No</th>
+<th style="text-align: center;">RESP</th>
+<th style="text-align: center;">MEANS</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Success</td>
+<td style="text-align: center;">Means the endpoint is successfully completed.</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Failed</td>
+<td style="text-align: center;">There is some validation error happened.</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Exception</td>
+<td style="text-align: center;">The server is not able to process your request because of any reason ranging from timeout exception to wrong data convert.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="43-get-tiles-gettitles">4.3 Get Tiles (GetTitles)</h2>
+<p>The endpoint will return you the list of Titles like Mr., Miss with the valid integer value which you need to pass while Adding Individual Client as that endpoint except <strong>TitleID</strong> parameter where you need to pass valid equivalent value. You can choose to skip making the call to this endpoint and just choose a valid value from the output table below and hard code it into your application. We will never likely going to change the output table and will only be adding new rows.</p>
+<h3 id="431-example-request">4.3.1 Example Request</h3>
+<p><a href="https://qa.lendxp.com/v1/rest/GetTitles">https://qa.lendxp.com/v1/rest/GetTitles</a></p>
+<h3 id="432-example-response">4.3.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;Message&quot;: &quot;Success&quot;,
+&quot;Records&quot;: [
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Mr&quot;,
+&quot;DataValue&quot;: &quot;1&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Mrs&quot;,
+&quot;DataValue&quot;: &quot;2&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Miss&quot;,
+&quot;DataValue&quot;: &quot;3&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Dr&quot;,
+&quot;DataValue&quot;: &quot;4&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Ms&quot;,
+&quot;DataValue&quot;: &quot;5&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Prof&quot;,
+&quot;DataValue&quot;: &quot;6&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Lady&quot;,
+&quot;DataValue&quot;: &quot;7&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Sir&quot;,
+&quot;DataValue&quot;: &quot;8&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Rev&quot;,
+&quot;DataValue&quot;: &quot;9&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Lord&quot;,
+&quot;DataValue&quot;: &quot;10&quot;
+},
+{&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Mx&quot;,
+&quot;DataValue&quot;: &quot;11&quot;
+},
+{&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Mx (gender neutral)&quot;,
+&quot;DataValue&quot;: &quot;12&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Prince&quot;,
+&quot;DataValue&quot;: &quot;13&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Princess&quot;,
+&quot;DataValue&quot;: &quot;14&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Master&quot;,
+&quot;DataValue&quot;: &quot;15&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Dame&quot;,
+&quot;DataValue&quot;: &quot;16&quot;
+}
+],
+&quot;Resp&quot;: 0
+}
+</code></pre>
+<p>You need to pass a valid value from Data Value while adding Individual Client like 1, 2, and 3 and so on.</p>
+<h3 id="423-output-value">4.2.3 Output Value</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data Text</th>
+<th style="text-align: center;">Data Value (TitleID)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Mr</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Mrs</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">Miss</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Dr</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">Ms</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Prof</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">Lady</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sir</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">Rev</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">Lord</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">Mx</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: center;">Mx (gender neutral)</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: center;">Prince</td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr>
+<td style="text-align: center;">Princess</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: center;">Master</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">Dame</td>
+<td style="text-align: center;">16</td>
+</tr>
+</tbody>
+</table>
+<h2 id="44-payment-methods-getpaymentmethods">4.4 Payment Methods (GetPaymentMethods)</h2>
+<p>The endpoint will return you the list of valid payment methods LENDXP platform support while you add agreement. You will need to a valid corresponding value while adding an agreement.</p>
+<h3 id="441-example-request">4.4.1 Example Request</h3>
+<p><a href="http://localhost:53153/v1/rest/GetPaymentMethods">http://localhost:53153/v1/rest/GetPaymentMethods</a></p>
+<h3 id="442-example-response">4.4.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;Message&quot;: &quot;Success&quot;,
+&quot;Records&quot;: [
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Direct Debit&quot;,
+&quot;DataValue&quot;: &quot;1&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Cash&quot;,
+&quot;DataValue&quot;: &quot;2&quot;
+}
+],
+&quot;Resp&quot;: 0
+}
+</code></pre>
+<h3 id="443-output-value">4.4.3 Output Value</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data Text</th>
+<th style="text-align: center;">Data Value (TitleID)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Direct Debit</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cash/Cheque</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="45-get-agreement-types-getagreementtypes">4.5 Get Agreement Types (GetAgreementTypes)</h2>
+<p>We support only two types of agreements in the LENDXP platform. They are corporate and Non Corporate.</p>
+<h3 id="451-example-request">4.5.1 Example Request</h3>
+<p><a href="http://localhost:53153/v1/rest/GetAgreementTypes">http://localhost:53153/v1/rest/GetAgreementTypes</a></p>
+<h3 id="452-example-response">4.5.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;Message&quot;: &quot;Success&quot;,
+&quot;Records&quot;: [
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Non Corporate&quot;,
+&quot;DataValue&quot;: &quot;1&quot;
+},
+{
+&quot;DataDescription&quot;: null, 
+&quot;DataText&quot;: &quot;Corporate&quot;,
+&quot;DataValue&quot;: &quot;2&quot;
+}
+],
+&quot;Resp&quot;: 0
+}
+</code></pre>
+<h3 id="453-output-value">4.5.3 Output Value</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data Text</th>
+<th style="text-align: center;">Data Value (TitleID)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Non Corporate</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Corporate</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="46-agreement-status-getallagreementstatus">4.6 Agreement Status (GetAllAgreementStatus)</h2>
+<p>The endpoint will list you all the agreement status which can be assigned to an agreement. The first status of agreement is always quoted and then it can either be confirmed or declined.</p>
+<h3 id="461-example-request">4.6.1 Example Request</h3>
+<p><a href="http://localhost:53153/v1/rest/GetAllAgreementStatus">http://localhost:53153/v1/rest/GetAllAgreementStatus</a></p>
+<h3 id="462-example-response">4.6.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;Message&quot;: &quot;Success&quot;,
+&quot;Records&quot;: [
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Quoted&quot;,
+&quot;DataValue&quot;: &quot;1&quot;
+},
+{
+&quot;DataDescription&quot;: null, 
+&quot;DataText&quot;: &quot;Confirmed&quot;, 
+&quot;DataValue&quot;: &quot;2&quot;
+},
+{
+&quot;DataDescription&quot;: null, 
+&quot;DataText&quot;: &quot;Cancelled&quot;, 
+&quot;DataValue&quot;: &quot;3&quot;
+},
+{
+&quot;DataDescription&quot;: null, 
+&quot;DataText&quot;: &quot;Completed&quot;, 
+&quot;DataValue&quot;: &quot;4&quot;
+},
+{
+&quot;DataDescription&quot;: null, 
+&quot;DataText&quot;: &quot;Settlement&quot;,
+&quot;DataValue&quot;: &quot;5&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;Declined&quot;,
+&quot;DataValue&quot;: &quot;6&quot;
+}
+],
+&quot;Resp&quot;: 0
+}
+</code></pre>
+<h3 id="463-output-value">4.6.3 Output Value</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data Text</th>
+<th style="text-align: center;">Data Value (TitleID)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Quoted</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Confirmed</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">Cancelled</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Completed</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">Settlement</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Declined</td>
+<td style="text-align: center;">6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="47-company-types-getbusinessclienttypes">4.7 Company Types (GetBusinessClientTypes)</h2>
+<p>The endpoint is used to get the list of company types LENDXP platform support. This is useful while you will be adding a Business Client in the system</p>
+<h3 id="471-example-request">4.7.1 Example Request</h3>
+<p><a href="http://localhost:53153/v1/rest/GetBusinessClientTypes">http://localhost:53153/v1/rest/GetBusinessClientTypes</a></p>
+<h3 id="472-example-response">4.7.2 Example Response</h3>
+<pre><code class="language-json">[
+{
+    &quot;CompanyTypeID&quot;: 1,
+    &quot;CompanyTypeName&quot;:&quot;Ltd&quot;
+},
+{
+    &quot;CompanyTypeID&quot;: 2, 
+    &quot;CompanyTypeName&quot;:&quot;Plc&quot;
+},
+{
+    &quot;CompanyTypeID&quot;: 3, 
+    &quot;CompanyTypeName&quot;:&quot;LLp&quot;
+},
+{
+    &quot;CompanyTypeID&quot;: 4, 
+    &quot;CompanyTypeName&quot;:&quot;Partnership&quot;
+},
+{
+    &quot;CompanyTypeID&quot;: 5, 
+    &quot;CompanyTypeName&quot;:&quot;Sole Trader&quot;
+}
+]
+</code></pre>
+<h3 id="473-output-value">4.7.3 Output Value</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data Text</th>
+<th style="text-align: center;">Data Value (TitleID)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Ltd (Limited)</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Plc</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">LLP</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Partnership</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sole Trader</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="48-brokeragents-getagents">4.8 Broker/Agents (GetAgents)</h2>
+<p>The endpoint is used to get you the Agent ID/Broker ID you need while adding Clients/Agreements</p>
+<h3 id="481-example-request">4.8.1 Example Request</h3>
+<p><a href="http://localhost:53153/v1/rest/GetAgents">http://localhost:53153/v1/rest/GetAgents</a></p>
+<h3 id="482-example-response">4.8.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;Message&quot;: &quot;Success&quot;,
+&quot;Records&quot;: [
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;BROKER A&quot;,
+&quot;DataValue&quot;: &quot;8112&quot;
+},
+{
+&quot;DataDescription&quot;: null,
+&quot;DataText&quot;: &quot;BROKER B&quot;,
+&quot;DataValue&quot;: &quot;1050&quot;
+} ], &quot;Resp&quot;: 0}
+</code></pre>
+<p>As you can see in the Response there are two Brokers that are assigned to the user who is using the API is returned. Now 8112 and 1050 are the Broker ID/Agent ID you need to use in other endpoints</p>
+<h2 id="49-get-products-getassignedproductbybroker">4.9 Get Products (GetAssignedProductByBroker)</h2>
+<p>The endpoint is used to return you the list of Products assigned to a Broker. You need to pass a Broker ID to this endpoint which you can get by calling GetAgents Endpoint.</p>
+<h3 id="491-example-request">4.9.1 Example Request</h3>
+<p><a href="http://localhost:53153/v1/rest/GetAssignedProductByBroker?BrokerID=1050">http://localhost:53153/v1/rest/GetAssignedProductByBroker?BrokerID=1050</a></p>
+<h3 id="492-example-response">4.9.2 Example Response</h3>
+<pre><code class="language-json">[
+{
+&quot;DataDescription&quot;: null, 
+&quot;DataText&quot;: &quot;Product A&quot;,
+&quot;DataValue&quot;: &quot;9&quot;
+},
+{
+&quot;DataDescription&quot;: null, 
+&quot;DataText&quot;: &quot;Product B&quot;,
+&quot;DataValue&quot;: &quot;13&quot;
+}
+]
+</code></pre>
+<p>As you can see there are two Products found with ID as 9 &amp; 10 which are assigned to Broker with ID 1050.</p>
+<h2 id="410-finance-calculator-financecalculator">4.10 Finance Calculator (FinanceCalculator)</h2>
+<p>This is the most important endpoint which you will be using often to get Payment Schedule, create sample quotes, and find finance rates, true rates without adding an Agreement.</p>
+<p>This endpoint can be called using a POST request only.</p>
+<h3 id="4101-example-request">4.10.1 Example Request</h3>
+<p><a href="http://localhost:53153/v1/rest/FinanceCalculator">http://localhost:53153/v1/rest/FinanceCalculator</a></p>
+<pre><code class="language-json">{
+&quot;Request&quot;: { 
+&quot;PrincipalSum&quot;: 100,
+&quot;BelowLineFees&quot;: 10,
+&quot;InterestRate&quot;: 12,
+&quot;NoOfInstalments&quot;: 5, 
+&quot;IsCalculationInTrueRate&quot;: true, 
+&quot;ProductID&quot;: 13, 
+&quot;AgreementDate&quot;: &quot;22/10/2019&quot;, 
+&quot;BrokerID&quot;: 1050,
+&quot;AgreementTemplateID&quot;: 4053
+}
+}
+</code></pre>
+<p>List of parameters are as follows</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Element</th>
+<th style="text-align: center;">DataType</th>
+<th style="text-align: center;">MaxLength</th>
+<th style="text-align: center;">Required?</th>
+<th style="text-align: center;">Description     s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">PrincipalSum</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Principal Amount/ Loan Amount</td>
+</tr>
+<tr>
+<td style="text-align: left;">BelowLineFees</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Below Line Fees/Processing Fees for a Loan</td>
+</tr>
+<tr>
+<td style="text-align: left;">InterestRate</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Interest Rate for an agreement. Based on Product Rules 0 is also a valid value.</td>
+</tr>
+<tr>
+<td style="text-align: left;">NoOfInstalments</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Should be 2+ or 1+ in case Product setting allow it</td>
+</tr>
+<tr>
+<td style="text-align: left;">IsCalculationInTrueRate</td>
+<td style="text-align: center;">Boolean</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">True or False – True means the interest rate you are passing is a True rate else it will take it a Flat Rate</td>
+</tr>
+<tr>
+<td style="text-align: left;">ProductID</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Product ID assigned to you</td>
+</tr>
+<tr>
+<td style="text-align: left;">AgreementDate</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Agreement date in UK format. Values value are 22/12/2018 means 22 December 2018</td>
+</tr>
+<tr>
+<td style="text-align: left;">BrokerID</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Any one Broker ID assigned to you</td>
+</tr>
+<tr>
+<td style="text-align: left;">AgreementTemplateID</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Optional – You can pass it as 0 but mandatory if you want to get the full payment schedule else you will only get Instalment amount, finance rates but not all individual payment details</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4102-example-response">4.10.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;AgreementPaymentSchedules&quot;: {
+&quot;AgreementPaymentSchedulesList&quot;:
+[
+{
+&quot;Fee&quot;:2,
+&quot;InstalmentAmount&quot;: 22.57,
+&quot;InstalmentNo&quot;: 10,
+&quot;Interest&quot;: 0.95,
+&quot;PaymentDate&quot;: &quot;21/02/2019&quot;,
+&quot;Principal&quot;: 19.62
+},
+{
+&quot;Fee&quot;:2,
+&quot;InstalmentAmount&quot;: 22.57,
+&quot;InstalmentNo&quot;: 20,
+&quot;Interest&quot;: 0.76,
+&quot;PaymentDate&quot;: &quot;21/03/2019&quot;,
+&quot;Principal&quot;: 19.81
+},
+{
+&quot;Fee&quot;:2,
+&quot;InstalmentAmount&quot;: 22.57,
+&quot;InstalmentNo&quot;: 30,
+&quot;Interest&quot;: 0.57,
+&quot;PaymentDate&quot;: &quot;23/04/2019&quot;,
+&quot;Principal&quot;: 20
+},
+{
+&quot;Fee&quot;:2,
+&quot;InstalmentAmount&quot;: 22.57,
+&quot;InstalmentNo&quot;: 40,
+&quot;Interest&quot;: 0.38,
+&quot;PaymentDate&quot;: &quot;21/05/2019&quot;,
+&quot;Principal&quot;: 20.19
+},
+],
+&quot;Message&quot;: &quot;Success&quot;,
+&quot;Resp&quot;:0
+},
+&quot;FinanceRate&quot;: &quot;111.42%&quot;,
+&quot;FlatRate&quot;: &quot;12.85 %&quot;,
+&quot;InstalmentAmount&quot;: &quot;22.57&quot;,
+&quot;InterestAmount&quot;: &quot;2.85&quot;,
+&quot;Message&quot;: null,
+&quot;Resp&quot;: 0,
+&quot;TotalBalanceOutstanding&quot;: 0,
+&quot;TotalCharges&quot;: &quot;12.85&quot;,
+&quot;TotalInstalments&quot;: 5,
+&quot;TotalPrincipalOutstanding&quot;: 100
+}
+</code></pre>
+<h2 id="411-agreement-templates-getassignedagreemnttemplates">4.11 Agreement Templates (GetAssignedAgreemntTemplates)</h2>
+<p>The endpoint will list you all the agreement templates assigned to you. The endpoint is a GET request and requires Broker ID and Product ID to fetch you the list of agreement templates.</p>
+<h3 id="4111-example-request">4.11.1 Example Request</h3>
+<p><a href="http://localhost:53153/v1/rest/GetAssignedAgreemntTemplates?BrokerID=1050&amp;ProductID=9">http://localhost:53153/v1/rest/GetAssignedAgreemntTemplates?BrokerID=1050&amp;ProductID=9</a></p>
+<h3 id="4112-example-response">4.11.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;FinanceAssignedTemplates&quot;: [
+{
+&quot;Fees&quot;: 10,
+&quot;Instalments&quot;: 2,
+&quot;Interest&quot;: 10,
+&quot;Principal&quot;: 2500,
+&quot;RateType&quot;: &quot;Flat Rate&quot;,
+&quot;TemplateID&quot;: 1032,
+&quot;TemplateName&quot;: &quot;INTRO2&quot;
+}
+],
+&quot;Message&quot;: &quot;Success&quot;,
+&quot;Resp&quot;: 0
+}
+</code></pre>
+<p>You will likely be passing the Template ID fetched from the endpoint to the previous endpoint named as Finance Calculator to get detailed Payment Schedule.</p>
+<h2 id="412-add-individual-client-addindividualclient">4.12 Add Individual Client (AddIndividualClient)</h2>
+<p>The endpoint is used to create a new Individual Client. This is the first step to add an agreement to LENDXP platform as agreement can only be created with a valid Client ID.</p>
+<p>While you add Client you will notice it requires lot of parameter and you must not skip any parameter as all are mandatory but you can choose to pass an empty or 0 value accordingly.</p>
+<p>This is a POST Request</p>
+<h3 id="4121-example-request">4.12.1 Example Request</h3>
+<pre><code class="language-json">{
+&quot;Client&quot;: {
+&quot;TitleID&quot;: 1, 
+&quot;FirstName&quot;: &quot;John&quot;,
+&quot;SurName&quot;: &quot;Martin&quot;, 
+&quot;DateOfBirth&quot;: &quot;20/01/1990&quot;, 
+&quot;ClientEmail&quot;: &quot;test@gmail.com&quot;, 
+&quot;PhoneHome&quot;: &quot;07855996633&quot;,
+&quot;BusinessPhone&quot;: &quot;07855996633&quot;,
+&quot;PhoneMobile&quot;: &quot;07855996633&quot;, 
+&quot;ClientReference&quot;: &quot;&quot;, 
+&quot;AgentID&quot;: 1050,
+&quot;MailAddress&quot;: { 
+&quot;Line1&quot;: &quot;E-123&quot;,
+&quot;Line2&quot;: &quot;&quot;,
+&quot;Line3&quot;: &quot;&quot;,
+&quot;Town&quot;: &quot;Luton&quot;,
+&quot;County&quot;: &quot;&quot;, 
+&quot;PostalCode&quot;: &quot;LU1 3EY&quot;, 
+&quot;NumberOfYearStay&quot;: 0,
+&quot;NumberOfMonthStay&quot;: 0
+},
+&quot;PhysicalAddress&quot;: { 
+&quot;Line1&quot;: &quot;E-123&quot;,
+&quot;Line2&quot;: &quot;&quot;,
+&quot;Line3&quot;: &quot;&quot;,
+&quot;Town&quot;: &quot;Luton&quot;,
+&quot;County&quot;: &quot;&quot;, 
+&quot;PostalCode&quot;: &quot;LU1 3EY&quot;, 
+&quot;NumberOfYearStay&quot;: 0,
+&quot;NumberOfMonthStay&quot;: 0
+},
+&quot;BankAccountInfo&quot;: { 
+&quot;AccountID&quot;: 0,
+&quot;AccountName&quot;: &quot;Account Name&quot;, 
+&quot;AccountNo&quot;: &quot;11223344&quot;, 
+&quot;BankName&quot;: &quot;&quot;,
+&quot;Branch&quot;: &quot;&quot;,
+&quot;City&quot;: &quot;&quot;,
+&quot;PostCode&quot;: &quot;&quot;, 
+&quot;SortCode&quot;: &quot;112255&quot;, 
+&quot;Street&quot;: &quot;&quot;,
+&quot;SubUrb&quot;: &quot;&quot;,
+&quot;ClientRefNo&quot;: &quot;&quot;, 
+&quot;Default&quot;: true
+},
+&quot;MonthlyIncome&quot;: 0,
+&quot;MonthlyExpense&quot;: 0
+}
+}
+</code></pre>
+<p>The JSON Request for Adding a Client can be split into the following four sections:</p>
+<ol>
+<li>Basic Client Information</li>
+<li>Mail Address</li>
+<li>Physical Address</li>
+<li>Bank Account Information</li>
+</ol>
+<h4 id="basic-information">Basic Information</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Element</th>
+<th style="text-align: center;">DataType</th>
+<th style="text-align: center;">MaxLength</th>
+<th style="text-align: center;">Required?</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">TitleID</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">A valid value – See GetTitles Endpoint</td>
+</tr>
+<tr>
+<td style="text-align: center;">FirstName</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">First Name</td>
+</tr>
+<tr>
+<td style="text-align: center;">SurName</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Last Name</td>
+</tr>
+<tr>
+<td style="text-align: center;">DateOfBirth</td>
+<td style="text-align: center;">Date</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Date of Birth in UK format e.g 22/12/2000</td>
+</tr>
+<tr>
+<td style="text-align: center;">ClientEmail</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Client Email address. You can leave empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">PhoneHome</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Home Phone</td>
+</tr>
+<tr>
+<td style="text-align: center;">BusinessPhone</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Business Phone</td>
+</tr>
+<tr>
+<td style="text-align: center;">PhoneMobile</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Mobile Phone</td>
+</tr>
+<tr>
+<td style="text-align: center;">ClientReference</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Client Reference – Should pass a distinct unique client reference value. Passing an empty value will generate a unique reference and will add to this client.</td>
+</tr>
+<tr>
+<td style="text-align: center;">AgentID</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">See GetAgents Endpoint</td>
+</tr>
+<tr>
+<td style="text-align: center;">MonthlyIncome</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">You can pass a 0 value. Monthly Income</td>
+</tr>
+<tr>
+<td style="text-align: center;">MonthlyExpense</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Monthly Expense. You can send a 0 value</td>
+</tr>
+</tbody>
+</table>
+<h5 id="mail-addressphysical-address">Mail Address/Physical Address</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Element</th>
+<th style="text-align: center;">DataType</th>
+<th style="text-align: center;">MaxLength</th>
+<th style="text-align: center;">Required?</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Line1</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Address Line 1 – House No./Name</td>
+</tr>
+<tr>
+<td style="text-align: center;">Line2</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Street Name – Accepts empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">Line3</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Additional Details – Accepts empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">Town</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Town</td>
+</tr>
+<tr>
+<td style="text-align: center;">County</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">County – Accepts empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">PostalCode</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Post Code</td>
+</tr>
+<tr>
+<td style="text-align: center;">NumberOfYearStay</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Number of Year Stay – Accepts 0 value</td>
+</tr>
+<tr>
+<td style="text-align: center;">NumberOfMonthStay</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Number of Month Stay – Accepts 0 value</td>
+</tr>
+</tbody>
+</table>
+<h5 id="bank-account-information">Bank Account Information</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Element</th>
+<th style="text-align: center;">DataType</th>
+<th style="text-align: center;">MaxLength</th>
+<th style="text-align: center;">Required?</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">AccountID</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Valid value 0</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountName</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Bank Account Name – likely Customer Name</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountNo</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Account Number – 8 digit number</td>
+</tr>
+<tr>
+<td style="text-align: center;">BankName</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Name of Bank – Optional, pass empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">Branch</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Branch – Optional, pass empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">City</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Bank City – Optional, pass empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">PostCode</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Bank Post Code – Optional, pass empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">SortCode</td>
+<td style="text-align: center;">Numeric</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Sort Code – 6 Digit Number</td>
+</tr>
+<tr>
+<td style="text-align: center;">Street</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Street – Optional, pass empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">SubUrb</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Sub Urban – Optional, pass empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">ClientRefNo</td>
+<td style="text-align: center;">Alphanumeric</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Pass empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">Default</td>
+<td style="text-align: center;">Boolean</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: left;">Pass true</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4122-example-response">4.12.2 Example Response</h3>
+<pre><code class="language-json">{
+&quot;ClientID&quot;: &quot;44061&quot;,
+&quot;ClientNo&quot;: &quot;15136&quot;,
+&quot;Message&quot;: &quot;New Client Added Successfully&quot;,
+&quot;Resp&quot;: 0
+}
+</code></pre>
+<p>If the client is successfully added you will see the response like above. You need to use ClientID to add a new agreement. ClientNo does not have any role in future endpoint and is just a unique number. You can choose to ignore it.</p>
+<h3 id="4123-failed-messages">4.12.3 Failed Messages</h3>
+<p>You can possibly see the following message if there client is not added successfully.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Error Message</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">JSON datais not passed in correct format.</td>
+<td style="text-align: center;">You will see the message if the POST request of Client Parameter is empty or not valid</td>
+</tr>
+<tr>
+<td style="text-align: center;">Date of Birth is not in valid format (UK Format is required).</td>
+<td style="text-align: center;">This happens when Date of Birth is not in UK format like “22/12/2000”. See it should be enclosed in quotes and must not be in another format like US format</td>
+</tr>
+<tr>
+<td style="text-align: center;">TitleID is incorrect, please use GetTitles Endpoint to get valid values</td>
+<td style="text-align: center;">Title ID is missing. You must refer GetTitles endpoint and pass a valid value like 1</td>
+</tr>
+<tr>
+<td style="text-align: center;">First Name is required.</td>
+<td style="text-align: center;">First Name is not supplied and/or empty</td>
+</tr>
+<tr>
+<td style="text-align: center;">SurName is required.</td>
+<td style="text-align: center;">Last Name is passed an empty value</td>
+</tr>
+<tr>
+<td style="text-align: center;">Date of birth is required.</td>
+<td style="text-align: center;">Date of Birth is not passed</td>
+</tr>
+<tr>
+<td style="text-align: center;">Mail Address is required.</td>
+<td style="text-align: center;">Mail Address Block is missed</td>
+</tr>
+<tr>
+<td style="text-align: center;">Mail Address is required.</td>
+<td style="text-align: center;">Physical Address Block is missed</td>
+</tr>
+<tr>
+<td style="text-align: center;">Post Code is required in Mail Address.</td>
+<td style="text-align: center;">If Postcode is not passed in Mail Address</td>
+</tr>
+<tr>
+<td style="text-align: center;">Line 1 is required in Physical Address.</td>
+<td style="text-align: center;">If Line1 is not passed in Physical Address</td>
+</tr>
+<tr>
+<td style="text-align: center;">Post Code is required in Physical Address.</td>
+<td style="text-align: center;">If Postcode is not supplied in Physical Address</td>
+</tr>
+<tr>
+<td style="text-align: center;">Bank Account Information is required.</td>
+<td style="text-align: center;">If Bank Account Information Block is missing</td>
+</tr>
+<tr>
+<td style="text-align: center;">Account Name is required.</td>
+<td style="text-align: center;">If Account Name is missing</td>
+</tr>
+<tr>
+<td style="text-align: center;">Account No is required.</td>
+<td style="text-align: center;">If Account number is not passed</td>
+</tr>
+<tr>
+<td style="text-align: center;">Account No should be of 8 digits.</td>
+<td style="text-align: center;">If Account number is not of 8 digits. For account numbers like 123345 you must add zeroes in front to make it a 8 digit number</td>
+</tr>
+<tr>
+<td style="text-align: center;">Account No value should not be 00000000.</td>
+<td style="text-align: center;">If you pass a 00000000 value in account number</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sort Code is required.</td>
+<td style="text-align: center;">If sort code is missing</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sort Code should be of 6 digits.</td>
+<td style="text-align: center;">If Sort code is not of 6 digits</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sort Code value should not be 000000.</td>
+<td style="text-align: center;">Sort code value is 000000</td>
+</tr>
+<tr>
+<td style="text-align: center;">You are not assigned any AgentID.</td>
+<td style="text-align: center;">If the user is not assigned any Broker ID. It looks strange but yes there can be a user with no broker ID assigned. Please contact administrator</td>
+</tr>
+<tr>
+<td style="text-align: center;">Incorrect AgentID is passed.</td>
+<td style="text-align: center;">Allowed AgentID is If you are assigned only 1 Broker ID and you pass it a wrong value or a 0 value</td>
+</tr>
+<tr>
+<td style="text-align: center;">Incorrect AgentID is passed.</td>
+<td style="text-align: center;">Allowed AgentIDs are If you are assigned multiple Broker IDs and the passed Broker ID is not from them</td>
+</tr>
+<tr>
+<td style="text-align: center;">This Client reference has already been used.</td>
+<td style="text-align: center;">Please choose another If you pass a Client Reference and it is used by another Client</td>
+</tr>
+<tr>
+<td style="text-align: center;">This Email address is reserved or not allowed.</td>
+<td style="text-align: center;">Please enter valid email address of Client. If you pass an email address but it is already assigned to another Client</td>
+</tr>
+<tr>
+<td style="text-align: center;">&lt; Any THING &gt;</td>
+<td style="text-align: center;">API is failed to handle the error and the client is not added</td>
+</tr>
+</tbody>
+</table>
+<h2 id="413-add-new-agreement-addnewagreement">4.13 Add New Agreement (AddNewAgreement)</h2>
+<p>The endpoint is used to create a new Loan Agreement. The same endpoint is used to create Non Corporate as well as Corporate Agreements unlike two endpoints which are used to create individual client and business client.</p>
+<p>Before you add an agreement you must have a valid client ID with you. You can create an agreement on existing client or add a new client to get a valid Client ID.</p>
+<p>While you add Client you will notice it requires lot of parameter and you must not skip any parameter as all are mandatory but you can choose to pass an empty or 0 value accordingly.</p>
+<p>Like add Client this is also a POST Request</p>
+<h3 id="4131-example-request">4.13.1 Example Request</h3>
+<pre><code class="language-json">{
+  &quot;Agreement&quot;: {
+    &quot;ClientID&quot;: 69631,
+    &quot;AgreementDate&quot;: &quot;14/02/2025&quot;,
+    &quot;Principal&quot;: 100,
+    &quot;DirectDebitCommencementDate&quot;: &quot;14/02/2025&quot;,
+    &quot;InceptionDate&quot;: &quot;14/02/2025&quot;,
+    &quot;PolicyNo&quot;: &quot;POL_1001&quot;,
+    &quot;AgentID&quot;: 22299,
+    &quot;AgreementTypeID&quot;: 1,
+    &quot;IsFlatRate&quot;: true,
+    &quot;InterestRate&quot;: 10,
+    &quot;FeesDescription&quot;: &quot;&quot;,
+    &quot;ClientReference&quot;: &quot;&quot;,
+    &quot;PaymentMethodID&quot;: 1,
+    &quot;BrokerReferenceNo&quot;: &quot;&quot;,
+    &quot;Comment&quot;: &quot;&quot;,
+    &quot;Fees&quot;: 0,
+    &quot;DatePayableToBroker&quot;: &quot;18/02/2025&quot;,
+    &quot;InsurerName&quot;: &quot;Insurer&quot;,
+    &quot;InsurerID&quot;: 0,
+    &quot;TotalInstalments&quot;: 10,
+    &quot;AgreementTemplateID&quot;: 0,
+    &quot;IsClientSatisfactory&quot;: true,
+    &quot;IsClientSelfEmployed&quot;: true,
+    &quot;ClientCCJ&quot;: true,
+    &quot;ClientAcceptable&quot;: true,
+    &quot;ProductID&quot;: 2041,
+    &quot;BrokerTransReferenceNo&quot;: &quot;&quot;,
+    &quot;DepositFees&quot;: 0,
+    &quot;AdminFees&quot;: 0,
+    &quot;OptionFees&quot;: 0,
+    &quot;Make&quot;: &quot;&quot;,
+    &quot;Model&quot;: &quot;&quot;,
+    &quot;YearOfManufacture&quot;: &quot;&quot;,
+    &quot;CarSerialNumber&quot;: &quot;&quot;,
+    &quot;RenewalAgreementNo&quot;: 0,
+    &quot;PolicyTypeID&quot;: 0,
+    &quot;Attributes&quot;: [
+      {
+        &quot;AttributeName&quot;: &quot;&quot;,
+        &quot;AttributeValue&quot;: &quot;&quot;,
+        &quot;IdentificationID&quot;: &quot;&quot;
+      }
+    ],
+    &quot;PreferredDDCDate&quot;: &quot;&quot;
+  }
+}
+</code></pre>
+<p>Most of the parameters are mandatory and configured based on Product Rules. For some product some fields are mandatory while for others that’s not the case.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ClientID</td>
+<td>Numeric</td>
+<td>Client ID with which Agreement must relate to.</td>
+</tr>
+<tr>
+<td>AgreementDate</td>
+<td>Date</td>
+<td>Agreement Date (UK format). Has no role in payment schedule, broker payment date.</td>
+</tr>
+<tr>
+<td>Principal</td>
+<td>Numeric</td>
+<td>Loan Amount or Principal Amount</td>
+</tr>
+<tr>
+<td>DirectDebitCommencementDate</td>
+<td>Date</td>
+<td>Direct Debit Commencement date (UK format)</td>
+</tr>
+<tr>
+<td>Inception Date</td>
+<td>Date</td>
+<td>Policy Inception date (UK format)</td>
+</tr>
+<tr>
+<td>PolicyNo</td>
+<td>Alphanumeric</td>
+<td>Policy Number</td>
+</tr>
+<tr>
+<td>AgentID</td>
+<td>Numeric</td>
+<td>Broker ID or Agent ID</td>
+</tr>
+<tr>
+<td>AgreementTypeID</td>
+<td>Numeric</td>
+<td>Agreement Type – use GetAgreementTypes Endpoint</td>
+</tr>
+<tr>
+<td>IsFlatRate</td>
+<td>Boolean</td>
+<td>Is a Boolean value and denotes whether the interest rate specified is a FLAT rate or a TRUE rate</td>
+</tr>
+<tr>
+<td>InterestRate</td>
+<td>Numeric</td>
+<td>Interest Rate of an agreement. 0 is a valid value</td>
+</tr>
+<tr>
+<td>FeesDescription</td>
+<td>Alphanumeric</td>
+<td>Fees Description.</td>
+</tr>
+<tr>
+<td>ClientReference</td>
+<td>Alphanumeric</td>
+<td>Leave Empty value</td>
+</tr>
+<tr>
+<td>PaymentMethodID</td>
+<td>Numeric</td>
+<td>Valid Payment Method ID. Use GetPaymentMethods endpoint</td>
+</tr>
+<tr>
+<td>BrokerReferenceNo</td>
+<td>Alphanumeric</td>
+<td>Broker Reference Number. Leave an empty value will generate unique Broker Reference number</td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>Alphanumeric</td>
+<td>Comments (Optional)</td>
+</tr>
+<tr>
+<td>Fees</td>
+<td>Numeric</td>
+<td>Below Line Fees. Pass 0 if you don’t want to apply fees</td>
+</tr>
+<tr>
+<td>DatePayableToBroker</td>
+<td>Date</td>
+<td>Date Payable to Broker (UK format)</td>
+</tr>
+<tr>
+<td>InsurerName</td>
+<td>Alphanumeric</td>
+<td>Insurer Name</td>
+</tr>
+<tr>
+<td>InsurerID</td>
+<td>Numeric</td>
+<td>Pass 0 or call GetInsurers endpoint to select a valid value</td>
+</tr>
+<tr>
+<td>TotalInstalments</td>
+<td>Numeric</td>
+<td>Total Number of Instalments. Mostly 2 is a minimum value</td>
+</tr>
+<tr>
+<td>AgreementTemplateID</td>
+<td>Numeric</td>
+<td>Agreement Template ID. We highly recommend passing a 0 value. We will retire this parameter soon and using this endpoint can give unexpected results</td>
+</tr>
+<tr>
+<td>IsClientSatisfactory</td>
+<td>Boolean</td>
+<td>Has borrower paid in satisfactory manner</td>
+</tr>
+<tr>
+<td>IsClientSelfEmployed</td>
+<td>Boolean</td>
+<td>Is borrower employed/self-employed</td>
+</tr>
+<tr>
+<td>ClientCCJ</td>
+<td>Boolean</td>
+<td>Has borrower confirmed it has no CCJs</td>
+</tr>
+<tr>
+<td>ClientAcceptable</td>
+<td>Boolean</td>
+<td>Has borrower confirmed it can meet the monthly payments</td>
+</tr>
+<tr>
+<td>ProductID</td>
+<td>Numeric</td>
+<td>Valid Product ID. Use GetAssignedProductByBroker to get a Product assigned to you</td>
+</tr>
+<tr>
+<td>BrokerTransReferenceNo</td>
+<td>Alphanumeric</td>
+<td>Broker Transaction Reference. Leave it as empty if you are not using it.</td>
+</tr>
+<tr>
+<td>DepositFees</td>
+<td>Decimal</td>
+<td>Deposit fees for the agreement. (Optional)</td>
+</tr>
+<tr>
+<td>AdminFees</td>
+<td>Decimal</td>
+<td>Administrative fees for processing the agreement. (Optional)</td>
+</tr>
+<tr>
+<td>OptionFees</td>
+<td>Decimal</td>
+<td>Optional fees associated with the agreement. (Optional)</td>
+</tr>
+<tr>
+<td>Make</td>
+<td>Alphanumeric</td>
+<td>Make of the vehicle. (Optional)</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>Alphanumeric</td>
+<td>Model of the vehicle. (Optional)</td>
+</tr>
+<tr>
+<td>YearOfManufacture</td>
+<td>Alphanumeric</td>
+<td>Year the vehicle was manufactured. (Optional)</td>
+</tr>
+<tr>
+<td>CarSerialNumber</td>
+<td>Alphanumeric</td>
+<td>Serial number of the vehicle. (Optional)</td>
+</tr>
+<tr>
+<td>RenewalAgreementNo</td>
+<td>Numeric</td>
+<td>Renewal Agreement Number. (Optional)</td>
+</tr>
+<tr>
+<td>PolicyTypeID</td>
+<td>Numeric</td>
+<td>Policy Type Identifier. (Optional)</td>
+</tr>
+<tr>
+<td>AttributeName</td>
+<td>Alphanumeric</td>
+<td>Name of the attribute associated with the agreement. (Optional)</td>
+</tr>
+<tr>
+<td>AttributeValue</td>
+<td>Alphanumeric</td>
+<td>Value assigned to the attribute. (Optional)</td>
+</tr>
+<tr>
+<td>IdentificationID</td>
+<td>Alphanumeric</td>
+<td>Identification ID for the attribute. (Optional)</td>
+</tr>
+<tr>
+<td>PreferredDDCDate</td>
+<td>Alphanumeric</td>
+<td>Preferred DDC date (UK format) in case of Agreement Template ID when provided. (Optional)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4132-example-response">4.13.2 Example Response</h3>
+<pre><code class="language-json">{
+  &quot;AgreementID&quot;: 21,
+  &quot;AgreementNo&quot;: 21,
+  &quot;Message&quot;: &quot;Agreement added successfully&quot;,
+  &quot;Resp&quot;: 0
+}
+</code></pre>
+<p>If the agreement is successfully added you will see the response like above. You need to use AgreementID to for all subsequent agreement related endpoints like Get Agreement Payment Schedule, Get Agreement Status etc.</p>
+<h3 id="4133-failed-messages">4.13.3 Failed Messages</h3>
+<p>You can possibly see the following message if there agreement is not added successfully.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Error Message</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Looks like you dont have permission to create the agreement.</td>
+<td style="text-align: center;">If the user who is trying to add an agreement does not have permissions to add an agreement. You need to contact administrator to get the access.</td>
+</tr>
+<tr>
+<td style="text-align: center;">JSON data is not passed in correct format.</td>
+<td style="text-align: center;">If the JSON data supplied by you is not valid</td>
+</tr>
+<tr>
+<td style="text-align: center;">Inception Date is not in valid format (UK Format is required).</td>
+<td style="text-align: center;">Inception date is not supplied in valid UK format</td>
+</tr>
+<tr>
+<td style="text-align: center;">AgreementTemplateID is incorrect, Leave it 0 or please use GetAgreementTemplates Endpoint to get valid values.</td>
+<td style="text-align: center;">If the AgreementTemplateID provided is incorrect or invalid. Leave it as 0 or use the GetAgreementTemplates endpoint to fetch valid values before proceeding.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Agreement Date is not in valid format (UK Format is required).</td>
+<td style="text-align: center;">Agreement Date is not supplied in valid UK format</td>
+</tr>
+<tr>
+<td style="text-align: center;">Direct Debit Commencement Date is not in valid format (UK Format is required).</td>
+<td style="text-align: center;">Direct Debit date is not supplied in UK format</td>
+</tr>
+<tr>
+<td style="text-align: center;">Date Payable To Broker is not in valid format (UK Format is required).</td>
+<td style="text-align: center;">Broker Payment date is not supplied in UK format and or empty</td>
+</tr>
+<tr>
+<td style="text-align: center;">ClientID is either incorrect or you dont have access to the Specific Client.</td>
+<td style="text-align: center;">ClientID is incorrect or you don’t have access to the Client, possibly it is assigned to different broker</td>
+</tr>
+<tr>
+<td style="text-align: center;">Principal Amount should be equal or greater than 1.00.</td>
+<td style="text-align: center;">If Principal Amount/Loan Amount is less than 1 or greater than 10000000</td>
+</tr>
+<tr>
+<td style="text-align: center;">Fees should be 0 or greater than 0.</td>
+<td style="text-align: center;">If Fees is less than 0 or greater than 10000000</td>
+</tr>
+<tr>
+<td style="text-align: center;">Selected Agreement cannot be linked as it is not associated with same client.</td>
+<td style="text-align: center;">This error occurs when the selected agreement does not belong to the same client. Select an agreement that is associated with the same client.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Only Agreements with same product can be linked.</td>
+<td style="text-align: center;">Agreements can only be linked if they have the same product. Select an agreement with the same product</td>
+</tr>
+<tr>
+<td style="text-align: center;">Please pass a valid Policy Type ID or leave it as null.</td>
+<td style="text-align: center;">Pass a valid Policy Type ID that matches the selected product or leave it as null.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Total Instalments should be greater than 1 and less than</td>
+<td style="text-align: center;">If total instalment is less than 2 or greater than specified by the company settings</td>
+</tr>
+<tr>
+<td style="text-align: center;">This Broker Reference Has Already Been Used. Please Choose Another.</td>
+<td style="text-align: center;">If you pass a Broker Reference Number but it is already associated with existing agreement</td>
+</tr>
+<tr>
+<td style="text-align: center;">AgreementTypeID is incorrect, please use GetAgreementTypes Endpoint to get valid values</td>
+<td style="text-align: center;">Agreement Type ID is not a valid value</td>
+</tr>
+<tr>
+<td style="text-align: center;">PaymentMethodID is incorrect, please use GetPaymentMethods Endpoint to get valid values</td>
+<td style="text-align: center;">Payment Method Is not a valid value</td>
+</tr>
+<tr>
+<td style="text-align: center;">Interest Rate should be between 0 and 100.</td>
+<td style="text-align: center;">Interest rate is less than 0 or more than 100</td>
+</tr>
+<tr>
+<td style="text-align: center;">Admin Fees should be 0 or more than 0.</td>
+<td style="text-align: center;">Admin Fees must be 0 or greater.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Option Fees should be 0 or more than 0</td>
+<td style="text-align: center;">Option Fees must be 0 or greater.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Deposit Fees should be 0 or more than 0.</td>
+<td style="text-align: center;">Deposit Fees must be 0 or greater.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Client Reference does not match with the Client. Leave it empty or enter correct Client Reference Number</td>
+<td style="text-align: center;">Client reference is passed but does not match the Client Reference number</td>
+</tr>
+<tr>
+<td style="text-align: center;">You are not assigned any AgentID.</td>
+<td style="text-align: center;">If the user who is calling the API is not assigned any Broker</td>
+</tr>
+<tr>
+<td style="text-align: center;">Incorrect AgentID is passed. Allowed AgentIDs are "</td>
+<td style="text-align: center;">If Broker ID is assigned to the API user but not passed a valid value</td>
+</tr>
+<tr>
+<td style="text-align: center;">InsurerID is incorrect, please use GetInsurers Endpoint to get valid values or Pass 0</td>
+<td style="text-align: center;">Insurer ID is passed as a positive integer number but not a valid insurer ID</td>
+</tr>
+<tr>
+<td style="text-align: center;">Policy Number is required</td>
+<td style="text-align: center;">ONLY if Product requires Policy Number</td>
+</tr>
+<tr>
+<td style="text-align: center;">Insurer Name is required</td>
+<td style="text-align: center;">ONLY if Product requires Insurer Name</td>
+</tr>
+<tr>
+<td style="text-align: center;">This is not a valid Product ID</td>
+<td style="text-align: center;">If incorrect product id is passed</td>
+</tr>
+<tr>
+<td style="text-align: center;">Product ID can't be ZERO. Please provide the valid assigned Product ID.</td>
+<td style="text-align: center;">If Product ID is passed as 0</td>
+</tr>
+<tr>
+<td style="text-align: center;">Product ID is mandatory to create an Agreement.</td>
+<td style="text-align: center;">If Product ID is not passed</td>
+</tr>
+<tr>
+<td style="text-align: center;">The total number of instalments should be greater than or equal to 1.</td>
+<td style="text-align: center;">If total instalments is less than 1</td>
+</tr>
+<tr>
+<td style="text-align: center;">The total number of instalments should be greater than 1.</td>
+<td style="text-align: center;">If total instalments is less than 2</td>
+</tr>
+<tr>
+<td style="text-align: center;">&lt; Any THING &gt;</td>
+<td style="text-align: center;">API is failed to handle the error and the agreement is not added</td>
+</tr>
+<tr>
+<td style="text-align: center;">Broker Transaction Reference already exists in Agreement.</td>
+<td style="text-align: center;">If Broker Transaction reference is passed but it is already associated with some Agreement</td>
+</tr>
+<tr>
+<td style="text-align: center;">Broker Transaction Reference already exists in existing MTA.</td>
+<td style="text-align: center;">If Broker Transaction reference is passed but it is associated with some Broker Payment</td>
+</tr>
+<tr>
+<td style="text-align: center;">Agreement cannot be created as the Broker is not longer active</td>
+<td style="text-align: center;">Agreement creation failed because the selected broker is inactive. Select an active broker to continue.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Agreement cannot be created unless a Product is specfied.</td>
+<td style="text-align: center;">Agreement creation requires a valid product. Specify a valid Product ID to proceed.</td>
+</tr>
+<tr>
+<td style="text-align: center;">No bank details found for selected client.</td>
+<td style="text-align: center;">If No Bank Accounts are found for the Client. Can happen rarely if Client is not added properly</td>
+</tr>
+<tr>
+<td style="text-align: center;">- DisbursmentIssue-</td>
+<td style="text-align: center;">Agreement is added successfully but Broker Payments are not split properly</td>
+</tr>
+</tbody>
+</table>
+<h2 id="414-get-agreements-by-parameters-getagreementsbyparameter">4.14 Get Agreements By Parameters (GetAgreementsByParameter)</h2>
+<p>The endpoint is used to retrieve agreements based on different parameters. 
+Please note this will only fetch agreement if the parameter values are not empty. </p>
+<p>This is a POST Request</p>
+<h3 id="4141-example-request">4.14.1 Example Request</h3>
+<pre><code class="language-json">{
+  &quot;Params&quot;: {
+    &quot;ParameterName&quot;: &quot;AgreementNo&quot;,
+    &quot;ParameterValue&quot;: &quot;{{lxpAgreementNo}}&quot;
+  }
+}
+</code></pre>
+<p>We support four parameter names currently and are as follows:</p>
+<ol>
+<li>AgreementNo</li>
+<li>BrokerReference (Broker Reference No)</li>
+<li>PolicyNo (Policy Number)</li>
+<li>TransactionReference (Also popularly called as Broker Transaction Reference)</li>
+</ol>
+<p>This endpoint will return multiple Agreements if two agreements have same parameter value.</p>
+<p>Also please note if you pass the Policy No (or any parameter) as empty and even though there are few agreements with empty policy no this endpoint will still return no results.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
